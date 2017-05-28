@@ -1,0 +1,40 @@
+1. Is it possible to use same meta store by multiple users in case of embedded Hive, if no then why?
+
+Answer: Default embedded databse with hive is apache derby which allows only 1 user. By using other DBs multiple users can access the same metastore.
+
+2. What is SerDe in Hive?
+
+Answer:
+A SerDe is a short name for a Serializer Deserializer. Hive uses SerDe (and FileFormat) to read and write data from tables. 
+An important concept behind Hive is that it DOES NOT own the Hadoop File System (HDFS) format that data is stored in. 
+
+3. What is the functionality of query processor in Apache Hive?
+
+Answer:
+
+This component implements the processing framework for converting SQL to a graph of map/reduce jobs and the execution time framework 
+to run those jobs in the order of dependencies.
+
+4. How can Hive avoid MapReduce?
+
+Answer: set hive.exec.mode.local.auto property to true
+
+5. What are the types of table in Hive?
+
+Answer: Managed table and external table.
+
+6. Does Hive support record level insert, delete or update?
+
+Answer: No
+
+7. What are the binary storage formats supported in Hive?
+
+Answer: SEQUENCEFILE and RCFILE
+
+8. What is the difference between external table and internal table in Hive?
+
+Answer:
+External table stores files on the HDFS server but tables are not linked to the source file completely.
+If we delete an external table the file still remains on the HDFS server.
+By default internal tables are stored in the directory "/user/hive/warehouse"
+Deleting the managed or internal table deletes the metadata and data from master-node and HDFS respectively.

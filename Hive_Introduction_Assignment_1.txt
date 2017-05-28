@@ -1,0 +1,38 @@
+1. When Hive is best suited and when is it not?
+
+Answer: Hive should be used for querying data and perform analysis on data collected over the time.
+
+
+2. When should one use Hive over MapReduce?
+
+Answer: It should be used when we need to write less code or when we want to query data in the form of SQL.
+
+3. What is Hive metastore?
+
+Answer: Hive Metastore keeps data about the hive tables and partitions.
+
+
+4. How can Hive improve performance with orc file format tables?
+
+Answer: It stores data in compressed format.
+
+5. What is thrift server and client, jdbc and odbc driver importance in hive?
+
+Answer: Using these hive can communicate to remote client to submit request to hive.
+
+
+6. What is the importance of partition in hive?
+
+Answer: Partition allowes to keep related data together. It makes data search queries fast. Partition can be done with multiple fields
+
+
+7. What is the use of bucketing in hive?
+
+Answer: Bucketting is also another technique to group the data.Bucketing can be done in only 1 field.
+
+
+8. What is the difference between static partitioning and dynamic partitioning in hive?
+
+Answer: 
+In static partitioning we need to specify the partition column value in each and every LOAD statement
+dynamic partition allow us not to specify partition column value each time.
